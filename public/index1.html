@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title></title>
+<style>
+    h1,p{
+        color:"blue";
+        font-family:"Comic Sans MS";
+    }
+    body{
+        background-color: teal;
+    }
+    .bg {
+  /* The image used */
+  background-image: url("images/icons/bg.jpg");
+
+  /* Full height */
+  height: 100%; 
+  width:100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<link rel="manifest" href="manifest.json">
+<body>
+    <div class="bg">
+<div id="fetchhtml">
+<form action="/error" method="post" id="fetchText">
+<div style="margin-top:150px; text-align: center;">
+
+<p>
+    Dance, the movement of the body in a rhythmic way, usually to music and within a given space, for the purpose of expressing an idea or emotion, releasing energy, or simply taking delight in the movement itself.
+</p>
+<a href="next.html" class="button">Click here</a>
+</div>
+</form>
+</div></div>
+<script src="main.js">
+
+if('serviceWorker' in navigator){
+    window.addEventListener('load',()=>{
+        navigator.serviceWorker.register('sw.js')
+    .then(registration =>{
+        console.log('service worker is registered',registration);
+    })
+    .catch(err =>{
+        console.log('Registration failed',err);
+    })
+    })
+}
+
+</script>
+</body>
+</html>
